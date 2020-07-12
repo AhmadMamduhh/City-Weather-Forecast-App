@@ -8,7 +8,7 @@ object RetrofitClient {
 
     fun getRetrofitClient() : Retrofit =
         retrofit ?: Retrofit.Builder()
-                    .baseUrl("api.openweathermap.org")
+                    .baseUrl("https://api.openweathermap.org")
                     .addConverterFactory(GsonConverterFactory.create()).build()
 
 }
