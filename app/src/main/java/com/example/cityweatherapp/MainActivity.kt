@@ -10,6 +10,7 @@ import com.example.cityweatherapp.data.RetrofitClient
 import com.example.cityweatherapp.data.WeatherServiceInterface
 import com.example.cityweatherapp.model.WeatherResponse
 import com.example.cityweatherapp.util.Utilities
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -67,6 +68,9 @@ class MainActivity : AppCompatActivity() {
                         weatherTextView.text = weatherResponse?.weather?.get(0)?.main
                         tempTextView.text = "${(weatherResponse?.main?.temp?.minus(273))?.toInt()} \u2103"
                         cityTextView.text = city.capitalize()
+                        val icon =  weatherResponse?.weather?.get(0)?.icon
+                        val imageUri = "https://openweathermap.org/img/wn/$icon@2x.png"
+                        Picasso.get().load(imageUri).into(weatherImageView)
                     }
                     else {
                         Log.d("failure", response.code().toString())

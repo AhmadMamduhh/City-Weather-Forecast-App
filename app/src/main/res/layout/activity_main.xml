@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#FF5041">
+    android:background="#55aaeb">
 
 
     <EditText
@@ -39,15 +39,16 @@
         android:id="@+id/tempText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        tools:text="Temperature"
-        android:textStyle="bold"
-        android:textSize="38sp"
+        android:layout_marginTop="88dp"
         android:textAlignment="center"
         android:textColor="#FFF"
+        android:textSize="38sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Temperature" />
 
     <TextView
         android:id="@+id/cityNameText"
@@ -81,8 +82,8 @@
 
     <ImageView
         android:id="@+id/weatherImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="121dp"
+        android:layout_height="102dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
